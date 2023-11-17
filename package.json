@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,10 +11,17 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@tauri-apps/api": "^1.5.1",
+    "@types/react-router-dom": "^5.3.3",
     "@types/three": "^0.158.2",
+    "framer-motion": "^10.16.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-router-dom": "^6.19.0",
     "three": "^0.158.0"
   },
   "devDependencies": {
