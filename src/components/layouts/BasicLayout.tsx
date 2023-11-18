@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import { Grid, GridItem, Box, Stack } from '@chakra-ui/react';
+import { ReactNode } from 'react';
+import { Grid, GridItem, Stack } from '@chakra-ui/react';
 
 interface LayoutProps {
   children: ReactNode[];
@@ -12,7 +12,7 @@ function BasicLayout({ children }: LayoutProps) {
       gap={6}
       p={4}
       bg='gray.200'
-      height='90vh'
+      height='100vh'
     >
       {/* Columna 1 por defecto */}
       <GridItem
