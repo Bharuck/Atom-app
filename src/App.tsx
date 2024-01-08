@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Box } from '@chakra-ui/react';
 import NavBar from './components/NavBar';
 import LoginPage from './pages/Login/Login';
 import HomePage from './pages/Home/Home';
@@ -29,16 +30,18 @@ const App: React.FC = () => {
   return (
     <Router>
       {isLoggedIn && <NavBar routes={routes} />}
-      <Routes>
-        <Route path="/" element={isLoggedIn ? <HomePage /> : <LoginPage onLogin={() => setIsLoggedIn(true)} />} />
-        {isLoggedIn && (
-          <>
-            {routes.map(route => (
-              <Route key={route.path} path={route.path} element={route.component} />
-            ))}
-          </>
-        )}
-      </Routes>
+      <Box height="90vh">
+        <Routes>
+          <Route path="/" element={isLoggedIn ? <HomePage /> : <LoginPage onLogin={() => setIsLoggedIn(true)} />} />
+          {isLoggedIn && (
+            <>
+              {routes.map(route => (
+                <Route key={route.path} path={route.path} element={route.component} />
+              ))}
+            </>
+          )}
+        </Routes>
+      </Box>
     </Router>
   );
 }

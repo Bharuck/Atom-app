@@ -30,7 +30,7 @@ interface NavBarProps {
 
 const NavBar: React.FC<NavBarProps> = ({ routes }) => {
   return (
-    <Flex align="center" justify="center" position="fixed" bottom="5" w="100%">
+    <Flex align="center" justify="center" position="fixed" bottom="5" height="10vh" w="100%">
       <Box
         p="2"
         backdropFilter="blur(15px)"
@@ -40,7 +40,7 @@ const NavBar: React.FC<NavBarProps> = ({ routes }) => {
         border="1px solid rgba(255, 255, 255, 0.18)">
         {routes.map(route => (
           <Tooltip key={route.path} label={route.name} placement="top">
-            <IconButton colorScheme='teal' variant='outline' as={Link} to={route.path} icon={React.createElement(Icons[route.iconName])} aria-label={route.name} mx={1} size="lg" />
+            <IconButton colorScheme='black' variant='outline' as={Link} to={route.path} icon={React.createElement(Icons[route.iconName])} aria-label={route.name} mx={1} size="lg" />
           </Tooltip>
         ))}
       </Box>

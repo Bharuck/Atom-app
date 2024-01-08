@@ -1,18 +1,26 @@
-import React from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Button, Flex } from '@chakra-ui/react';
+// import { GlassBox } from '../../components/GlassBox';
 
 function MControlPage() {
   return (
-    <Box>
-      <Box bg="green.500" mb={4} p={4}>
-        <Text>Hola</Text>
-      </Box>
-      <Box bg="transparent" mb={4} p={4}>
-        <Text>MControl</Text>
-      </Box>
-      <Box bg="blue.500" p={4}>
-        <Text>Hola</Text>
-      </Box>
+    <Box bg="blue.900" height="100%" width="100%">
+      <Flex direction={["column", "row"]} align={["flex-end", "flex-start"]} justify="space-between" height="100%">
+        <Flex direction={["column", "row"]} width="50%">
+          <Box width={["100%", "25%"]}>
+            <p>a</p>
+          </Box>
+          <Box width={["100%", "50%"]}>
+            <p>b</p>
+          </Box>
+          <Box width={["100%", "25%"]}>
+            <p>c</p>
+          </Box>
+        </Flex>
+
+        <Box width="50%">
+          <p>d</p>
+        </Box>
+      </Flex>
     </Box>
   );
 }

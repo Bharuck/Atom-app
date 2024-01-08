@@ -12,7 +12,6 @@ function BasicLayout({ children }: LayoutProps) {
       gap={6}
       p={4}
       bg='gray.200'
-      height='100vh'
     >
       {/* Columna 1 por defecto */}
       <GridItem
